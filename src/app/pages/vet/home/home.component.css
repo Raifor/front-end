@@ -1,0 +1,70 @@
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background: #7aa0e7;
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 130px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+  padding: 16px;
+
+  overflow: auto;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  color: white !important;
+}
+
+.menu-button mat-icon {
+  margin-right: 8px;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+::ng-deep.mdc-data-table__cell {
+  border-right: lightgrey 1px solid;
+}
+
+::ng-deep.mdc-data-table__header-cell {
+  border-right: lightgrey 1px solid;
+}
+
+::ng-deep.mat-mdc-table .mdc-data-table__header-row {
+  background-color: #7aa0e7;
+}
+
+::ng-deep.mdc-button--raised {
+  background-color: #7aa0e7 !important;
+  margin-top: 8px;
+}
+
+::ng-deep body {
+  background: white !important;
+}
+
+::ng-deep .mat-mdc-table {
+  margin-top: 8px;
+}

@@ -1,0 +1,80 @@
+<form [formGroup]="formGroup"
+  (ngSubmit)="onSubmit()"
+  class="form">
+  <div class="form">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field>
+            <mat-label>Nome do pet:</mat-label>
+            <input matInput formControlName="namePet">
+            <mat-error *ngIf="handleError('namePet', 'required')">
+              O nome do pet é obrigatório
+            </mat-error>
+            <mat-error *ngIf="handleError('namePet', 'minlength')">
+              Mínimo 3 caracteres
+            </mat-error>
+            <mat-error *ngIf="handleError('namePet', 'maxlength')">
+              Máximo 50 caracteres
+            </mat-error>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <mat-label>Nome do tutor:</mat-label>
+            <input matInput formControlName="nameTutor">
+            <mat-error *ngIf="handleError('nameTutor', 'required')">
+              O nome do tutor é obrigatório
+            </mat-error>
+            <mat-error *ngIf="handleError('nameTutor', 'minlength')">
+              Mínimo 3 caracteres
+            </mat-error>
+            <mat-error *ngIf="handleError('nameTutor', 'maxlength')">
+              Máximo 50 caracteres
+            </mat-error>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field>
+            <mat-label>Nome do Veterinário:</mat-label>
+            <input matInput formControlName="nameVet">
+            <mat-error *ngIf="handleError('nameVet', 'required')">
+              O nome do veterinário é obrigatório
+            </mat-error>
+            <mat-error *ngIf="handleError('nameVet', 'minlength')">
+              Mínimo 3 caracteres
+            </mat-error>
+            <mat-error *ngIf="handleError('nameVet', 'maxlength')">
+              Máximo 50 caracteres
+            </mat-error>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <mat-label>Espécie:</mat-label>
+            <input matInput formControlName="especie">
+            <mat-error *ngIf="handleError('especie', 'required')">
+              Espécie é obrigatório
+            </mat-error>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <mat-form-field>
+      <mat-label>Doença auto-imune</mat-label>
+      <mat-select formControlName="autoimmuneDisease">
+        <mat-option [value]="true">Sim</mat-option>
+        <mat-option [value]="false">Não</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <button mat-raised-button color="primary" type="submit">Salvar</button>
+  </div>
+</form>
+

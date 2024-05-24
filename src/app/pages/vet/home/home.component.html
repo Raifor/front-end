@@ -1,0 +1,22 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <button mat-button class="menu-button" routerLink="/" >
+      <mat-icon> home </mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/paciente">
+      <mat-icon>list</mat-icon>
+      <span>Pacientes</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/paciente/incluir">
+      <mat-icon>pets</mat-icon>
+      <span>Novo Paciente</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <h1>Controle de Pacientes</h1>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

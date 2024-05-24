@@ -1,0 +1,13 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  margin-top: 10px;
+}
+.example-full-width {
+  width: 100%;
+}
+.mat-mdc-form-field {
+  width: 100%;
+}
