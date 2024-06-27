@@ -1,0 +1,113 @@
+    <h2>Em Espera</h2>
+    <table mat-table [dataSource]="dataSourceEmEspera">
+
+        <ng-container matColumnDef="namePet">
+            <th mat-header-cell *matHeaderCellDef> Paciente </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.namePet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameTutor">
+            <th mat-header-cell *matHeaderCellDef> Tutor </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameTutor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameVet">
+            <th mat-header-cell *matHeaderCellDef> Veterinário </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameVet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="especie">
+            <th mat-header-cell *matHeaderCellDef> Espécie </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.especie}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-divider></mat-divider>
+
+    <h2>Em Atendimento</h2>
+    <table mat-table [dataSource]="dataSourceEmAtendimento">
+
+        <ng-container matColumnDef="namePet">
+            <th mat-header-cell *matHeaderCellDef> Paciente </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.namePet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameTutor">
+            <th mat-header-cell *matHeaderCellDef> Tutor </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameTutor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameVet">
+            <th mat-header-cell *matHeaderCellDef> Veterinário </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameVet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="especie">
+            <th mat-header-cell *matHeaderCellDef> Espécie </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.especie}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-divider></mat-divider>
+
+    <h2>Aguardando Retirada</h2>
+    <table mat-table [dataSource]="dataSourceAguardandoRetirada">
+
+        <ng-container matColumnDef="namePet">
+            <th mat-header-cell *matHeaderCellDef> Paciente </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.namePet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameTutor">
+            <th mat-header-cell *matHeaderCellDef> Tutor </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameTutor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameVet">
+            <th mat-header-cell *matHeaderCellDef> Veterinário </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameVet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="especie">
+            <th mat-header-cell *matHeaderCellDef> Espécie </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.especie}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-divider></mat-divider>
+
+    <h2>Retirado</h2>
+    <table mat-table [dataSource]="dataSourceRetirado">
+
+        <ng-container matColumnDef="namePet">
+            <th mat-header-cell *matHeaderCellDef> Paciente </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.namePet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameTutor">
+            <th mat-header-cell *matHeaderCellDef> Tutor </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameTutor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nameVet">
+            <th mat-header-cell *matHeaderCellDef> Veterinário </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.nameVet}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="especie">
+            <th mat-header-cell *matHeaderCellDef> Espécie </th>
+            <td mat-cell *matCellDef="let paciente"> {{paciente.especie}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>

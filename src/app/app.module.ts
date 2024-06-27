@@ -20,17 +20,17 @@ import {MatButtonModule} from "@angular/material/button";
     AppComponent,
     HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    VetModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatButtonModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        VetModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatButtonModule,
+    ],
   providers: [
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}},
     {

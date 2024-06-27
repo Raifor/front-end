@@ -556,4 +556,61 @@ export class VetControllerService extends BaseService {
     );
   }
 
+  /**
+   * Path part for operation listarPorSituacao
+   */
+  static readonly ListarPorSituacaoPath = '/v1/paciente/listarPorSituacao/{situacao}';
+
+  /**
+   * lista todos os pacientes por situação
+   *
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `listarPorSituacao()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  listarPorSituacao$Response(params: {
+    situacao: 'EM_ESPERA' | 'EM_ATENDIMENTO' | 'AGUARDANDO_RETIRADA' | 'RETIRADO';
+  },
+  context?: HttpContext
+
+): Observable<StrictHttpResponse<any>> {
+
+    const rb = new RequestBuilder(this.rootUrl, VetControllerService.ListarPorSituacaoPath, 'get');
+    if (params) {
+      rb.path('situacao', params.situacao, {});
+    }
+
+    return this.http.request(rb.build({
+      responseType: 'json',
+      accept: 'application/json',
+      context: context
+    })).pipe(
+      filter((r: any) => r instanceof HttpResponse),
+      map((r: HttpResponse<any>) => {
+        return r as StrictHttpResponse<any>;
+      })
+    );
+  }
+
+  /**
+   * lista todos os pacientes por situação
+   *
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `listarPorSituacao$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  listarPorSituacao(params: {
+    situacao: 'EM_ESPERA' | 'EM_ATENDIMENTO' | 'AGUARDANDO_RETIRADA' | 'RETIRADO';
+  },
+  context?: HttpContext
+
+): Observable<any> {
+
+    return this.listarPorSituacao$Response(params,context).pipe(
+      map((r: StrictHttpResponse<any>) => r.body as any)
+    );
+  }
+
 }

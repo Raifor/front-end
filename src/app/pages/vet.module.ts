@@ -17,28 +17,32 @@ import {IncluirPacienteComponent} from "./vet/incluir/incluirPaciente.component"
 import {vetRoutes} from "./vet-routing.module";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatMenuModule} from "@angular/material/menu";
+import { PacientesPorSituacaoComponent } from './vet/pacientes-por-situacao/pacientes-por-situacao.component';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
     ListaPacienteComponent,
-    IncluirPacienteComponent
+    IncluirPacienteComponent,
+    PacientesPorSituacaoComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(vetRoutes),
-    MatTableModule,
-    MatButtonModule,
-    MatIconModule,
-    HttpClientModule,
-    MatSnackBarModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatExpansionModule,
-    MatCardModule,
-    MatSidenavModule,
-    MatMenuModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(vetRoutes),
+        MatTableModule,
+        MatButtonModule,
+        MatIconModule,
+        HttpClientModule,
+        MatSnackBarModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        MatExpansionModule,
+        MatCardModule,
+        MatSidenavModule,
+        MatMenuModule,
+        MatListModule
+    ]
 })
 export class VetModule { }

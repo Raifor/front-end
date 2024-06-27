@@ -1,6 +1,7 @@
 import {Routes} from "@angular/router";
 import {ListaPacienteComponent} from "./vet/lista/listaPaciente.component";
 import {IncluirPacienteComponent} from "./vet/incluir/incluirPaciente.component";
+import {PacientesPorSituacaoComponent} from "./vet/pacientes-por-situacao/pacientes-por-situacao.component";
 
 export const vetRoutes: Routes = [
   {
@@ -28,6 +29,10 @@ export const vetRoutes: Routes = [
         path: '',
         redirectTo: 'listar',
         pathMatch: 'full'
+      },
+      {
+        path: 'pacientesPorSituacao',
+        component: PacientesPorSituacaoComponent,
       }
     ]
   }
